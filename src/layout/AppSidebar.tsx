@@ -18,6 +18,7 @@ import {
   UserCircleIcon,
 } from "../icons/index";
 import SidebarWidget from "./SidebarWidget";
+import { ShieldCheck, UserCog, Users } from "lucide-react";
 
 type NavItem = {
   name: string;
@@ -31,6 +32,16 @@ const navItems: NavItem[] = [
     icon: <GridIcon />,
     name: "Dashboard",
     subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+  },
+  {
+    icon: <UserCog />,
+    name: "Manage Users",
+    subItems: [{ name: "Users", path: "/users-tables", pro: false },{ name: "Role", path: "/role-tables", pro: false }],
+  },
+  {
+    icon: <ShieldCheck />,
+    name: "Manage Agent",
+    subItems: [{ name: "Agents", path: "/agents", pro: false },{ name: "Transactions", path: "/transactions", pro: false },{ name: "Withdraws", path: "/withdraws", pro: false }],
   },
   {
     icon: <CalenderIcon />,
@@ -90,6 +101,7 @@ const othersItems: NavItem[] = [
     subItems: [
       { name: "Sign In", path: "/signin", pro: false },
       { name: "Sign Up", path: "/signup", pro: false },
+      { name: "Log In", path: "/login", pro: false },
     ],
   },
 ];
